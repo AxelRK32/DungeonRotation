@@ -6,18 +6,20 @@ public class Rotate : MonoBehaviour
 {
     enum GravityDirection { Down, Left, Up, Right };
     GravityDirection m_GravityDirection;
-    int zCam = 0;
+    float zCam = 0;
+    public int rotateSpeed = 100;
     bool rotateCam = false;
     // Start is called before the first frame update
     void Start()
     {
         m_GravityDirection = GravityDirection.Down;
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !rotateCam)
         {
             ChangeGravity();
             rotateCam = true;
@@ -61,7 +63,7 @@ public class Rotate : MonoBehaviour
 
     public void RotateCamera()
     {
-        zCam += 1;
+        zCam += rotateSpeed * Time.deltaTime;
         if (m_GravityDirection == GravityDirection.Right && zCam >= 90)
         {
             zCam = 90;
