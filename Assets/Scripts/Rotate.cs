@@ -6,20 +6,28 @@ public class Rotate : MonoBehaviour
 {
     enum GravityDirection { Down, Left, Up, Right };
     GravityDirection m_GravityDirection;
+    float zCam = 0;
+    public int rotateSpeed = 100;
+    bool rotateCam = false;
     // Start is called before the first frame update
     void Start()
     {
         m_GravityDirection = GravityDirection.Down;
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !rotateCam)
         {
             ChangeGravity();
+            rotateCam = true;
         }
-        
+        if (rotateCam)
+        {
+            RotateCamera();
+        }
     }
 
     public void ChangeGravity()
@@ -48,7 +56,34 @@ public class Rotate : MonoBehaviour
                 //Change the gravity to go in the right direction
                 Physics2D.gravity = new Vector2(9.8f, 0);
                 m_GravityDirection = GravityDirection.Right;
+                
                 break;
         }
+    }
+
+    public void RotateCamera()
+    {
+        zCam += rotateSpeed * Time.deltaTime;
+        if (m_GravityDirection == GravityDirection.Right && zCam >= 90)
+        {
+            zCam = 90;
+            rotateCam = false;
+        }
+        if (m_GravityDirection == GravityDirection.Up && zCam >= 180)
+        {
+            zCam = 180;
+            rotateCam = false;
+        }
+        if (m_GravityDirection == GravityDirection.Left && zCam >= 270)
+        {
+            zCam = 270;
+            rotateCam = false;
+        }
+        if (m_GravityDirection == GravityDirection.Down && (zCam >= 360 || zCam <= 0))
+        {
+            zCam = 0;
+            rotateCam = false;
+        }
+        transform.rotation = Quaternion.Euler(0, 0, zCam);
     }
 }
