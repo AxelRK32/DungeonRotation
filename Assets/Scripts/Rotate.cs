@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,15 @@ public class Rotate : MonoBehaviour
 {
     enum GravityDirection { Down, Left, Up, Right };
     GravityDirection m_GravityDirection;
+    PlayerController controller;
     float zCam = 0;
     public int rotateSpeed = 100;
     bool rotateCam = false;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Character");
         m_GravityDirection = GravityDirection.Down;
         Application.targetFrameRate = 60;
     }
@@ -29,6 +33,7 @@ public class Rotate : MonoBehaviour
             RotateCamera();
         }
     }
+
 
     public void ChangeGravity()
     {
@@ -56,7 +61,7 @@ public class Rotate : MonoBehaviour
                 //Change the gravity to go in the right direction
                 Physics2D.gravity = new Vector2(9.8f, 0);
                 m_GravityDirection = GravityDirection.Right;
-                
+
                 break;
         }
     }
@@ -85,5 +90,6 @@ public class Rotate : MonoBehaviour
             rotateCam = false;
         }
         transform.rotation = Quaternion.Euler(0, 0, zCam);
+        player.transform.rotation = Quaternion.Euler(0, 0, zCam);
     }
 }
