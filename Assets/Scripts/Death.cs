@@ -5,8 +5,9 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     Vector2 startPos = new Vector2(0, 0);
+
     // Update is called once per frame
-    void Update()
+   private void Update()
     {
         if (Mathf.Abs(transform.position.x) > 10 || Mathf.Abs(transform.position.y) > 10)
         {
@@ -14,4 +15,12 @@ public class Death : MonoBehaviour
             transform.position = startPos;
         }
     }
+
+        public void Dead()
+    {
+        Vector2 startPos = new Vector2(0, 0);
+        transform.position = startPos;
+
+    }
 }
+

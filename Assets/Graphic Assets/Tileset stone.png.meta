@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: fabaa8f081380464a811bb46228cb726
+=======
+guid: 3743f8e022aa8784494113600eea9e61
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +38,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< Updated upstream
     filterMode: 0
+=======
+    filterMode: 1
+>>>>>>> Stashed changes
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +51,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< Updated upstream
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +84,11 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< Updated upstream
     textureCompression: 0
+=======
+    textureCompression: 1
+>>>>>>> Stashed changes
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,6 +124,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< Updated upstream
     sprites:
     - serializedVersion: 2
       name: Tileset stone_0
@@ -382,6 +399,9 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+    sprites: []
+>>>>>>> Stashed changes
     outline: []
     physicsShape: []
     bones: []
@@ -392,6 +412,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       Tileset stone_0: -1741830062
       Tileset stone_1: -727801492
@@ -406,6 +427,9 @@ TextureImporter:
       Tileset stone_7: 196744753
       Tileset stone_8: -549471549
       Tileset stone_9: -2080752607
+=======
+    nameFileIdTable: {}
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
