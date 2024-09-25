@@ -13,6 +13,7 @@ public class Death : MonoBehaviour
         {
             Debug.Log("Player dead");
             transform.position = startPos;
+            Camera.main.GetComponent<Rotate>().ResetRotation();
         }
     }
 

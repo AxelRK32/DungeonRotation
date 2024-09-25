@@ -26,15 +26,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Physics2D.queriesStartInColliders = false;
-<<<<<<< Updated upstream
 		animator.applyRootMotion = false;
-=======
-
-        // Initialize the deathScript
-        deathScript = GetComponent<Death>();
-
-        animator.applyRootMotion = false;
->>>>>>> Stashed changes
     }
 
     void Update()
@@ -58,12 +50,8 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(xVelocity)); 
 
-<<<<<<< Updated upstream
         
         if ((x < 0 && Physics2D.gravity.y < 0) || (x > 0 && Physics2D.gravity.y > 0) || (x > 0 && Physics2D.gravity.x < 0) || (x < 0 && Physics2D.gravity.x > 0))
-=======
-        if (x < 0)
->>>>>>> Stashed changes
         {
             //transform.localScale = new Vector3(-1, 1, 1); // Facing left
             sprite.flipX = true;
@@ -77,23 +65,16 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-<<<<<<< Updated upstream
 
         
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
-=======
-        if (Input.GetButtonDown("Jump") && isGrounded)
->>>>>>> Stashed changes
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+            // rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+            //rb2D.
         }
 
-<<<<<<< Updated upstream
         
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rb2D.velocity.y > 0)
-=======
-        if (Input.GetButtonUp("Jump") && rb2D.velocity.y > 0)
->>>>>>> Stashed changes
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y * 0.5f);
         }
