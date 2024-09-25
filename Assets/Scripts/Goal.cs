@@ -10,10 +10,10 @@ public class Goal : MonoBehaviour
     {
         Debug.Log("Goal start");
     }
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log(other + " entered goal");
-        if (other.name.Equals("Character"))
+        if (other.gameObject.CompareTag("Player"))
         {
             currentLvl ++;
             SceneManager.LoadScene("Level" + currentLvl.ToString());
