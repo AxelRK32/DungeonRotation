@@ -92,4 +92,14 @@ public class Rotate : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, zCam);
         player.transform.rotation = Quaternion.Euler(0, 0, zCam);
     }
+
+    public void ResetRotation()
+    {
+        m_GravityDirection = GravityDirection.Left;
+        ChangeGravity();
+        zCam = 0;
+        transform.rotation = Quaternion.Euler(0, 0, zCam);
+        player.transform.rotation = Quaternion.Euler(0, 0, zCam);
+        rotateCam = false;
+    }
 }
