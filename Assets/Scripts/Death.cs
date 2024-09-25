@@ -17,10 +17,11 @@ public class Death : MonoBehaviour
         }
     }
 
-        public void Dead()
+    public void Dead()
     {
         transform.position = startPos;
         Camera.main.GetComponent<Rotate>().ResetRotation();
+
     }
 }
 
