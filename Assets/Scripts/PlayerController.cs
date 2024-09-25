@@ -69,7 +69,8 @@ public class PlayerController : MonoBehaviour
         
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+            // rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+            //rb2D.
         }
 
         
