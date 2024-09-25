@@ -7,7 +7,6 @@ public class Rotate : MonoBehaviour
 {
     enum GravityDirection { Down, Left, Up, Right };
     GravityDirection m_GravityDirection;
-    PlayerController controller;
     float zCam = 0;
     public int rotateSpeed = 100;
     bool rotateCam = false;
