@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     int currentLvl = 1;
-    Rotate rotate;
     public void Start()
     {
         Debug.Log("Goal start");
-        //rotate = GetComponent<Rotate>();
     }
     public void OnTriggerEnter2D(Collider2D other)
     {

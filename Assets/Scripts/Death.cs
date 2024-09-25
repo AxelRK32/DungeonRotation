@@ -19,9 +19,8 @@ public class Death : MonoBehaviour
 
         public void Dead()
     {
-        Vector2 startPos = new Vector2(0, 0);
         transform.position = startPos;
-
+        Camera.main.GetComponent<Rotate>().ResetRotation();
     }
 }
 
