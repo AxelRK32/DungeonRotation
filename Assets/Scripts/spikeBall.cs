@@ -12,8 +12,8 @@ public class spikeBall : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-         if(other.gameObject.CompareTag("Player")) 
-                other.gameObject.GetComponent<PlayerController>().DieSoon(0f);
+        if (other.gameObject.name.Equals("Character"))
+            other.gameObject.GetComponent<Death>().Dead();
                 
     }
 }
