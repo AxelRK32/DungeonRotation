@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 5;
 
     [Header("Jump")]
-    public float jumpPower = 6;
+    public float jumpPower = 10;
 
     Rigidbody2D rb2D;
     float xVelocity;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     // Reference to the onDeath script
     private Death deathScript;
+    private onDeath collisionDeath;
 
     private void Start()
     {
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         Physics2D.queriesStartInColliders = false;
 		animator.applyRootMotion = false;
+
+        collisionDeath = GetComponent<onDeath>();
     }
 
     void Update()
@@ -69,14 +73,14 @@ public class PlayerController : MonoBehaviour
         
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
         {
-            // rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
-            //rb2D.
+            rb2D.AddForce(transform.up * jumpPower * rb2D.mass, ForceMode2D.Impulse);
+
         }
 
         
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rb2D.velocity.y > 0)
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y * 0.5f);
+            //rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y * 0.5f);
         }
     }
 
@@ -87,14 +91,9 @@ public class PlayerController : MonoBehaviour
 
     public void DieSoon(float time)
     {
-        if (deathScript != null)
+        if (collisionDeath != null)
         {
-            Invoke("TriggerDeath", time);
+            collisionDeath.Dead();;
         }
-    }
-
-    private void TriggerDeath()
-    {
-        deathScript.Dead();
     }
 }
