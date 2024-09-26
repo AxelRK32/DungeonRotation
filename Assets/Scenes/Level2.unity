@@ -1466,7 +1466,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1039108578}
   - component: {fileID: 1039108579}
-  - component: {fileID: 1039108580}
   m_Layer: 0
   m_Name: LVL 2 (ram)
   m_TagString: Untagged
@@ -1544,21 +1543,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1039108580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039108577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc21a33d9f20b8f428ff989895401c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SliderHue: {fileID: 0}
-  m_SliderSaturation: {fileID: 0}
-  m_SliderValue: {fileID: 0}
 --- !u!1 &1048671360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,9 +2614,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc21a33d9f20b8f428ff989895401c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Hue: 0
+  m_Saturation: 0
+  m_Value: 0
   m_SliderHue: {fileID: 0}
   m_SliderSaturation: {fileID: 0}
   m_SliderValue: {fileID: 0}
+  m_Renderer: {fileID: 0}
 --- !u!1 &1878284783
 GameObject:
   m_ObjectHideFlags: 0

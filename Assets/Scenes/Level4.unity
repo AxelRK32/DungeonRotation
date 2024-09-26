@@ -980,7 +980,6 @@ GameObject:
   m_Component:
   - component: {fileID: 337780203}
   - component: {fileID: 337780202}
-  - component: {fileID: 337780204}
   m_Layer: 0
   m_Name: Goal_2 skugga_0
   m_TagString: Untagged
@@ -1030,7 +1029,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -279484535, guid: 5f6966136070f334bb3226da68ec4c0d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6666667, g: 0.54901963, b: 0.6, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1056,21 +1055,6 @@ Transform:
   - {fileID: 695907029}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &337780204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337780201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc21a33d9f20b8f428ff989895401c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SliderHue: {fileID: 0}
-  m_SliderSaturation: {fileID: 0}
-  m_SliderValue: {fileID: 0}
 --- !u!1 &344968819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6141,7 +6125,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8d5cd327009f95142867c2dcf3b30ab5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6666667, g: 0.54901963, b: 0.6, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
