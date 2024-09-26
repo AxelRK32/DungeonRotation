@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
-    Vector2 startPos = new Vector2(0, 0);
+    Vector2 startPos = new Vector2(-8, -8);
 
     // Update is called once per frame
    private void Update()
@@ -13,6 +15,7 @@ public class Death : MonoBehaviour
         {
             Debug.Log("Player dead");
             transform.position = startPos;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Camera.main.GetComponent<Rotate>().ResetRotation();
         }
     }
@@ -20,6 +23,7 @@ public class Death : MonoBehaviour
     public void Dead()
     {
         transform.position = startPos;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Camera.main.GetComponent<Rotate>().ResetRotation();
 
     }
