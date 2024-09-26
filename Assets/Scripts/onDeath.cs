@@ -5,7 +5,7 @@ public class onDeath : MonoBehaviour
 
     public void Dead()
     {
-        Vector2 startPos = new Vector2(0, 0);
+        Vector2 startPos = new Vector2(-8, -8);
         transform.position = startPos;
 
     }

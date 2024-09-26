@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    Vector2 startPos = new Vector2(0, 0);
+    Vector2 startPos = new Vector2(-8, -8);
 
     // Update is called once per frame
    private void Update()
