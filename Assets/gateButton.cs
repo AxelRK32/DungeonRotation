@@ -15,9 +15,9 @@ private void Start()
 
 private void OnTriggerEnter(Collider other)
 {
-     Debug.Log($"Trigger Entered by: {other.gameObject.name}, Tag: {other.tag}");
     if (isButtonActive && other.CompareTag("Player")) 
     {
+        Debug.Log(other.gameObject.name);
         buttonAnimator.SetTrigger("PressButtonTrigger");
         GateController.OpenGate();
         isButtonActive = false; 
