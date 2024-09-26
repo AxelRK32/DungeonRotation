@@ -878,6 +878,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 3716372973667200061, guid: dd36fb62564297a4e9a8d61f1ea3de28, type: 3}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716372973667200061, guid: dd36fb62564297a4e9a8d61f1ea3de28, type: 3}
+      propertyPath: jumpPower
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4462788374301838122, guid: dd36fb62564297a4e9a8d61f1ea3de28, type: 3}
       propertyPath: m_Mass
       value: 20
