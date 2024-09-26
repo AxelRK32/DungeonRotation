@@ -21,6 +21,7 @@ public class GateButton : MonoBehaviour
             Debug.Log("player toched button");
             btnSprite.sprite = pressedSprite;
             //Start/Play gate open animation
+            gate.GetComponent<Animation>().Play();
             gate.GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<GateButton>().enabled = false;
         }
