@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
-    // Reference to the onDeath script
     private Death deathScript;
     private Death collisionDeath;
 
