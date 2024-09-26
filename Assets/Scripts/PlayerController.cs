@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     // Reference to the onDeath script
     private Death deathScript;
-    private onDeath collisionDeath;
+    private Death collisionDeath;
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         Physics2D.queriesStartInColliders = false;
 		animator.applyRootMotion = false;
 
-        collisionDeath = GetComponent<onDeath>();
+        collisionDeath = GetComponent<Death>();
     }
 
     void Update()

@@ -8,7 +8,7 @@ public class spikeBall : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.name.Equals("Character"))
-            other.gameObject.GetComponent<onDeath>().Dead();
+            other.gameObject.GetComponent<Death>().Dead();
 
         if (other.gameObject.CompareTag("Player"))
         {
@@ -20,7 +20,7 @@ public class spikeBall : MonoBehaviour
             // Check if the component is null
             if (playerController != null)
             {
-                playerController.DieSoon(0f);
+                playerController.DieSoon(1f);
             }
             else
             {

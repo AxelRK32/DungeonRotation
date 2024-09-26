@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Death : MonoBehaviour
         {
             Debug.Log("Player dead");
             transform.position = startPos;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Camera.main.GetComponent<Rotate>().ResetRotation();
         }
     }
@@ -20,6 +23,7 @@ public class Death : MonoBehaviour
     public void Dead()
     {
         transform.position = startPos;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Camera.main.GetComponent<Rotate>().ResetRotation();
 
     }
