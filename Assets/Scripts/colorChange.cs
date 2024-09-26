@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ColorHSVtoRGBExample : MonoBehaviour
+public class colorChange : MonoBehaviour
 {
     float m_Hue;
     float m_Saturation;
