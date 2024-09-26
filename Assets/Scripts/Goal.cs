@@ -17,7 +17,7 @@ public class Goal : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other + " entered goal");
+        Debug.Log(other.gameObject.name + " entered goal");
         if (other.gameObject.CompareTag("Player"))
         {
             currentLvl ++;
